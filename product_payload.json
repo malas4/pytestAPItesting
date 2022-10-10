@@ -1,12 +1,11 @@
 {
-  "name": "toy car",
-  "type": "sdfsdfsd",
+  "name": "spiderman 9 inches",
+  "type": "toys",
   "price": 0,
   "shipping": 0,
   "upc": "strindfdsdfg",
-  "description": "stsfsdfdsring",
-  "manufacturer": "stsfsdfdring",
-  "model": "strisfsdfng",
-  "url": "strsfdsfing",
-  "image": "stsfdsfring"
+  "description": "toys for kids",
+  "manufacturer": "sam",
+  "model": "V34567"
+
 }

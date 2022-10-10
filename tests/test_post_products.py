@@ -1,6 +1,6 @@
 import requests
 import json
-from config import BASE_URI
+from config import BASE_URI, id
 
 
 def test_product_data_add_delete():
@@ -20,3 +20,21 @@ def test_product_data_add_delete():
     assert response.status_code == 200
     response = requests.get(f'{BASE_URI}/{id}')
     assert response.status_code == 404
+
+def test_patch_product_data():
+    URL=f'{BASE_URI}/products/{id}'
+    data = {
+                "name": "Spider man New",
+                "type": "figurine",
+                "price": 20,
+                "shipping": 0,
+                "upc": "dfd",
+                 "description": "toys for kids",
+                "manufacturer": "sam",
+                "model": "32323"
+            }
+    response = requests.patch(URL, data=data)
+    response_json = response.json()
+    assert response.status_code == 200
+    print(response_json['price'])
+    assert response_json['price'] == 10
