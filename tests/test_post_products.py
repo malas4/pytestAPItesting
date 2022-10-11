@@ -8,7 +8,7 @@ def test_product_data_add_delete():
     file = open(r'C:\Users\Nihaan\PycharmProjects\rest\product_payload.json', "r")
     request_body = json.load(file)
     response = requests.post(URL, json=request_body)
-    assert response.status_code == 201
+    assert response.status_code == 200
 
     # validating the response
     response_python_object = json.loads(response.text)
